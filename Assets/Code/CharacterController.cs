@@ -12,7 +12,7 @@ public class CharacterController : MovementController {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
-		velocity = new Vector2(5 * horizontal, 5 * vertical);
+		velocity = new Vector2(maxSpeed * horizontal, maxSpeed * vertical);
 	}
 
 	protected override void DetermineDirection(){

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class MovementController : MonoBehaviour {
 
+	public float maxSpeed = 5f;
 	protected float horizontal;
 	protected float vertical;
 	protected Rigidbody2D rb;
