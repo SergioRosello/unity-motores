@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class BasicEnemyController : MovementController {
 	public float enemyBounds = 1f;
+	public float speed = 2f;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
-		// rb.position = Camera.main.ViewportToWorldPoint(new Vector2(Random.Range(0, Screen.width), Screen.height + 3));
+		Debug.Log("PlayerControllerWithOrto: " + PlayerController.widthOrtho.ToString());
+		rb.position = new Vector2(Random.Range(-PlayerController.widthOrtho, PlayerController.widthOrtho),Camera.main.orthographicSize);
+		speed = -maxSpeed;
 	}
 	
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
 		if(rb.position.y <= -Camera.main.orthographicSize + enemyBounds){
-			Debug.Log("IF");
-			velocity = new Vector2(0, maxSpeed);
 			rb.MoveRotation(180f);
-		}else{
-			Debug.Log("ELSE");
-			velocity = new Vector2(0, -maxSpeed);
+			speed = maxSpeed;
 		}
+		velocity = new Vector2(0, speed);
 	}
 
 	protected override void DetermineDirection(){
