@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicEnemyController : MovementController {
+	public float enemyBounds = 1f;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
@@ -12,8 +13,14 @@ public class BasicEnemyController : MovementController {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
-		velocity = new Vector2(0, -maxSpeed);
-		Debug.Log("velocity: " + velocity);
+		if(rb.position.y <= -Camera.main.orthographicSize + enemyBounds){
+			Debug.Log("IF");
+			velocity = new Vector2(0, maxSpeed);
+			rb.MoveRotation(180f);
+		}else{
+			Debug.Log("ELSE");
+			velocity = new Vector2(0, -maxSpeed);
+		}
 	}
 
 	protected override void DetermineDirection(){
