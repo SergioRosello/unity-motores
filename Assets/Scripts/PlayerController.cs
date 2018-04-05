@@ -7,6 +7,8 @@ public class PlayerController : MovementController {
 	public float playerBoundsY = 0.5f, playerBoundsX = 0.5f;
 	public static float screenRatio;
 	public static float widthOrtho;
+	public GameObject bulletPrefab;
+	public float bulletSpeed;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
@@ -19,6 +21,10 @@ public class PlayerController : MovementController {
 		base.Update();
 		keepPlayerWithinBounds();
 		velocity = new Vector2(maxSpeed * horizontal, maxSpeed * vertical);
+		if(Input.GetKey(KeyCode.Space)){
+			var bullet = GameObject.Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+			bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
+		}
 	}
 
 	protected void keepPlayerWithinBounds(){

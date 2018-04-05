@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicEnemyController : MovementController {
 	public float enemyBounds = 1f;
+	public float Health;
 	public float speed = 2f;
 	// Use this for initialization
 	protected override void Start () {
