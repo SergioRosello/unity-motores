@@ -152,6 +152,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50902072306642916, guid: ab58037ac87f5402d998577bc9497c04,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab58037ac87f5402d998577bc9497c04, type: 2}
   m_IsPrefabParent: 0
@@ -236,7 +241,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.009731836, g: 0.04883938, b: 0.1102941, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
