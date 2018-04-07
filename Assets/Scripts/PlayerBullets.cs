@@ -32,6 +32,9 @@ float spawnTime;
 			if (targetHealth) {
 				targetHealth.CurrentHealth--;
 			}
+			else if(targetHealth.CurrentHealth <= 0){
+				Destroy(other, 0f);
+			}
 			//SpawnerManager.Instance.SpawnParticles (SpawnerManager.Instance.BloodPrefab, transform.position);
 		}
 	}	

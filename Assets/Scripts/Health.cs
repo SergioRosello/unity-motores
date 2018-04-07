@@ -25,7 +25,7 @@ public class Health : MonoBehaviour {
 					collider.size = SizeWhenDead;
 					collider.offset = new Vector2(OffsetWhenDead.x, OffsetWhenDead.y);
 					collider.isTrigger = true;
-					//Destroy (gameObject, 5);
+					// Destroy (gameObject, 5);
 				}
 			}
 		}
