@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerBullets : MonoBehaviour {
 
-float spawnTime, timeToDespawn = 5;
+public float timeToDespawn = 5;
+float spawnTime;
 	private SpriteRenderer sr;
 	private Rigidbody2D rb;
 
@@ -26,6 +27,7 @@ float spawnTime, timeToDespawn = 5;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.layer == Layers.Enemies) {
+			Debug.Log("Enemy has been beaten!");
 			var targetHealth = other.GetComponent<Health> ();
 			if (targetHealth) {
 				targetHealth.CurrentHealth--;

@@ -9,11 +9,14 @@ public class PlayerController : MovementController {
 	public static float widthOrtho;
 	public GameObject bulletPrefab;
 	public float bulletSpeed;
+
+	Animator animator;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
 		 screenRatio = Mathf.Abs((float)Screen.width / (float)Screen.height);
 		 widthOrtho = Camera.main.orthographicSize * screenRatio;
+		 animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +27,17 @@ public class PlayerController : MovementController {
 		if(Input.GetKey(KeyCode.Space)){
 			var bullet = GameObject.Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 			bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
+		}
+		//TODO: Esto está mal necesita refactorización
+		if(horizontal > 0){
+			animator.SetBool("Right", true);
+			animator.SetBool("Left", false);
+		} else if(horizontal < 0) {
+			animator.SetBool("Left", true);
+			animator.SetBool("Right", false);
+		} else {
+			animator.SetBool("Right", false);
+			animator.SetBool("Left", false);
 		}
 	}
 
