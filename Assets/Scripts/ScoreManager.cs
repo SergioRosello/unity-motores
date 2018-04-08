@@ -11,8 +11,9 @@ public class ScoreManager : Singleton<ScoreManager> {
 	void Awake(){		
 		score = 0;
 	}
-	
-	// Update is called once per frame
+	void Start(){
+		DontDestroyOnLoad(this);
+	}
 	void Update () {
 		scoreText.text = score.ToString();	
 	}

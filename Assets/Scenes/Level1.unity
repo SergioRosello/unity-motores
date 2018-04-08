@@ -216,7 +216,17 @@ MonoBehaviour:
   - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
   - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
   - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
-  wave1: []
+  wave1:
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
+  - {fileID: 1709735957179644, guid: 39faaa933b9e24f6c90d17f14be89276, type: 2}
 --- !u!1 &1096092997
 GameObject:
   m_ObjectHideFlags: 0
