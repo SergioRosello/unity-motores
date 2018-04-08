@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 212683953626021410}
   - component: {fileID: 95076135547272850}
   - component: {fileID: 114734695348073056}
+  - component: {fileID: 210359314917646022}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -63,7 +64,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61480828235379008
 BoxCollider2D:
@@ -99,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 1399694873013982}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 78aa2e0fa178244e6849ad06b08ac178, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6105f0a3a7c6f41fea7546dc680aaf9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -119,8 +120,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
+  timerBetweenBullets: 0.1
   playerBoundsY: 0.5
   playerBoundsX: 0.5
+  bulletPrefab: {fileID: 1055680077616422, guid: 9c9723a5e75e443639d8326c42ede4bc,
+    type: 2}
+  bulletSpeed: 6.57
 --- !u!114 &114734695348073056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,6 +140,16 @@ MonoBehaviour:
   MaxHealth: 1
   SizeWhenDead: {x: 1.5, y: 0.75}
   OffsetWhenDead: {x: -1.5, y: -0.5}
+--- !u!210 &210359314917646022
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399694873013982}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
 --- !u!212 &212683953626021410
 SpriteRenderer:
   m_ObjectHideFlags: 1

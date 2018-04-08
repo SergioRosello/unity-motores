@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MovementController {
+public class PlayerController : BehaviourController {
 
 	public float timerBetweenBullets;
 	public float playerBoundsY = 0.5f, playerBoundsX = 0.5f;
