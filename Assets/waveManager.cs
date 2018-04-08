@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class waveManager : MonoBehaviour {
 
-	public List<GameObject> Wave;
+	public List<GameObject> wave0;
+	public List<GameObject> wave1;
 	// Use this for initialization
 	void Start () {
-		PoolManager.Load(Wave[0], Wave.Count);
-		foreach( GameObject enemy in Wave) {
+		spwanWave(wave0);
+	}
+	protected void spwanWave(List<GameObject> wave){
+		PoolManager.Load(wave[0], wave.Count);
+		foreach( GameObject enemy in wave) {
 			PoolManager.Spawn(enemy);
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
