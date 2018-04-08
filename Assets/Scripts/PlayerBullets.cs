@@ -27,7 +27,6 @@ float spawnTime;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.layer == Layers.Enemies) {
-			Debug.Log("Enemy has been beaten!");
 			var targetHealth = other.GetComponent<Health> ();
 			if (targetHealth) {
 				targetHealth.CurrentHealth--;
@@ -35,7 +34,6 @@ float spawnTime;
 			else if(targetHealth.CurrentHealth <= 0){
 				Destroy(other, 0f);
 			}
-			//SpawnerManager.Instance.SpawnParticles (SpawnerManager.Instance.BloodPrefab, transform.position);
 		}
 	}	
 }

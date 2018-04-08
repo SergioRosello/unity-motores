@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MovementController {
 
+	public float timerBetweenBullets;
 	public float playerBoundsY = 0.5f, playerBoundsX = 0.5f;
 	public static float screenRatio;
 	public static float widthOrtho;
 	public GameObject bulletPrefab;
 	public float bulletSpeed;
+	private float timerBetweenBulletsAux = 0;
 
 	Animator animator;
 	// Use this for initialization
@@ -24,7 +26,9 @@ public class PlayerController : MovementController {
 		base.Update();
 		keepPlayerWithinBounds();
 		velocity = new Vector2(maxSpeed * horizontal, maxSpeed * vertical);
-		if(Input.GetKey(KeyCode.Space)){
+		timerBetweenBulletsAux += Time.deltaTime;
+		if(Input.GetKey(KeyCode.Space) && timerBetweenBulletsAux >= timerBetweenBullets){
+			timerBetweenBulletsAux = 0;
 			var bullet = GameObject.Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 			bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
 		}
