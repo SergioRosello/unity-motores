@@ -6,22 +6,14 @@ using UnityEngine.UI;
 public class ScoreManager : Singleton<ScoreManager> {
 
 	public Text scoreText;
-	private int score = 0;
+	public static int score;
 	
-	// Use this for initialization
-	void Start () {
-		scoreText.text = score.ToString();
+	void Awake(){		
+		score = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-	public void addScore(int scoreToAdd){
-		Debug.Log("Score before: " + score);
-		score =+ scoreToAdd;
-		scoreText.text = score.ToString();
-		Debug.Log("Score after: " + score);
+		scoreText.text = score.ToString();	
 	}
 }

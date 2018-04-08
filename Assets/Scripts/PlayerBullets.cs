@@ -30,7 +30,7 @@ float spawnTime;
 			var targetHealth = other.GetComponent<Health> ();
 			if (targetHealth) {
 				Debug.Log("TargetHealth !!!");
-				ScoreManager.Instance.addScore(10);
+				ScoreManager.score += 10;
 				targetHealth.CurrentHealth--;
 			}
 		}
