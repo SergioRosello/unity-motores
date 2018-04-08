@@ -29,10 +29,9 @@ float spawnTime;
 		if (other.gameObject.layer == Layers.Enemies) {
 			var targetHealth = other.GetComponent<Health> ();
 			if (targetHealth) {
+				Debug.Log("TargetHealth !!!");
+				ScoreManager.Instance.addScore(10);
 				targetHealth.CurrentHealth--;
-			}
-			else if(targetHealth.CurrentHealth <= 0){
-				Destroy(other, 0f);
 			}
 		}
 	}	

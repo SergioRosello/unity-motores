@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class BasicEnemyController : BehaviourController {
 	public float enemyBounds = 1f;
-
 	public float speed = 2f;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
-		Debug.Log("PlayerControllerWithOrto: " + PlayerController.widthOrtho.ToString());
-		rb.position = new Vector2(Random.Range(-PlayerController.widthOrtho, PlayerController.widthOrtho),Camera.main.orthographicSize);
+		rb.position = new Vector2(Random.Range(-PlayerController.widthOrtho + enemyBounds, PlayerController.widthOrtho - enemyBounds),Camera.main.orthographicSize);
 		speed = -maxSpeed;
 	}
 	

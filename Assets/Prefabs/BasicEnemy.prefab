@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 2
-  enemyBounds: 2.02
+  enemyBounds: 1
   speed: 2
 --- !u!212 &212870128282818670
 SpriteRenderer:
