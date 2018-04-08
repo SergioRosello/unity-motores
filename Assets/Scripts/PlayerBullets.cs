@@ -32,6 +32,7 @@ float spawnTime;
 				ScoreManager.score += 10;
 				targetHealth.CurrentHealth--;
 			}
+			Destroy(gameObject, 0f);
 		}
 	}	
 }
