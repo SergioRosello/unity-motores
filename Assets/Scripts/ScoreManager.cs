@@ -8,7 +8,7 @@ public class ScoreManager : Singleton<ScoreManager> {
 	public Text scoreText;
 	public static int score;
 	
-	void Awake(){		
+	void Awake(){
 		score = 0;
 	}
 	void Start(){
