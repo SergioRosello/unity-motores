@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Intermitent : MonoBehaviour {
 
@@ -13,9 +14,9 @@ public class Intermitent : MonoBehaviour {
   IEnumerator HideUnhide(){
     while (true) {
         yield return (new WaitForSeconds(timer));
-        gameObject.SetActive(true);
+		GetComponent<Text>().text = "";
         yield return (new WaitForSeconds(timer));
-        gameObject.SetActive(false);
+        GetComponent<Text>().text = "INSERT COIN";
     }
   }
 }
