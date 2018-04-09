@@ -14,9 +14,9 @@ public class Intermitent : MonoBehaviour {
   IEnumerator HideUnhide(){
     while (true) {
         yield return (new WaitForSeconds(timer));
-		GetComponent<Text>().text = "";
+		GetComponent<Text>().enabled = true;
         yield return (new WaitForSeconds(timer));
-        GetComponent<Text>().text = "INSERT COIN";
+        GetComponent<Text>().enabled = false;
     }
   }
 }
