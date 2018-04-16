@@ -44,6 +44,10 @@ public class PlayerController : BehaviourController {
 			animator.SetBool("Right", false);
 			animator.SetBool("Left", false);
 		}
+
+		if(!health.IsAlive){
+			SceneManager.LoadScene("Death");
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -77,10 +81,10 @@ public class PlayerController : BehaviourController {
 	protected override void DetermineDirection(){
 		horizontal = Input.GetAxisRaw("Horizontal");
 		vertical = Input.GetAxisRaw("Vertical");
-
 	}
 
 	void OnDestroy(){
-		// SceneManager.LoadScene("Death");
+		PlayerPrefs.SetFloat("highscore", ScoreManager.highScore);
+		PlayerPrefs.Save();
 	}
 }
