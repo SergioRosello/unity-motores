@@ -47,17 +47,10 @@ public class PlayerController : BehaviourController {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-			if(other.gameObject.layer == Layers.Enemies){
-				Health enemyhealth = other.GetComponent<Health>();
-				Debug.Log("Health type: " + health.GetType());
-				if(health)
-					enemyhealth.CurrentHealth--;
-				else
-					Destroy(other.gameObject);
-			}
-			if(other.gameObject.layer != Layers.Player){
-				health.CurrentHealth--;
-			}
+		Health enemyhealth = other.GetComponent<Health>();
+		if(enemyhealth) enemyhealth.CurrentHealth--;
+		else Destroy(other.gameObject);
+		health.CurrentHealth--;
 	}
 
 	protected void keepPlayerWithinBounds(){
