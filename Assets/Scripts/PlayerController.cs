@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : BehaviourController {
 
@@ -12,6 +13,7 @@ public class PlayerController : BehaviourController {
 	public GameObject bulletPrefab;
 	public float bulletSpeed;
 	private float timerBetweenBulletsAux = 0;
+	public Text UIHealth;
 
 	Animator animator;
 	public AudioClip shot;
@@ -29,6 +31,7 @@ public class PlayerController : BehaviourController {
 	protected override void Update () {
 		base.Update();
 		keepPlayerWithinBounds();
+		UIHealth.text = health.CurrentHealth.ToString();
 		velocity = new Vector2(maxSpeed * horizontal, maxSpeed * vertical);
 		timerBetweenBulletsAux += Time.deltaTime;
 		if(Input.GetKey(KeyCode.Space) && timerBetweenBulletsAux >= timerBetweenBullets){
