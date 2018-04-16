@@ -353,7 +353,7 @@ Prefab:
     - target: {fileID: 212683953626021410, guid: ab58037ac87f5402d998577bc9497c04,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95076135547272850, guid: ab58037ac87f5402d998577bc9497c04,
         type: 2}

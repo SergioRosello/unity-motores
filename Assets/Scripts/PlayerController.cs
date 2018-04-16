@@ -54,6 +54,8 @@ public class PlayerController : BehaviourController {
 					enemyhealth.CurrentHealth--;
 				else
 					Destroy(other.gameObject);
+			}
+			if(other.gameObject.layer != Layers.Player){
 				health.CurrentHealth--;
 			}
 	}

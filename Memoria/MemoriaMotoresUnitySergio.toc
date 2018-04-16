@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Inspiraci\IeC {\'o}n e idea gener\IeC {\'a}l}{2}{section.1}
+\contentsline {section}{\numberline {2}Estructura de c\IeC {\'o}digo}{2}{section.2}
+\contentsline {section}{\numberline {3}Controladores de movimiento y comportamiento}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}BehaviourController}{2}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Enemigos}{2}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Actor principal}{3}{subsubsection.3.1.2}
