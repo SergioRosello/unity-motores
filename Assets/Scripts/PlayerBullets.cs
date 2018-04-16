@@ -27,7 +27,7 @@ float spawnTime;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.layer == Layers.Enemies) {
-			var targetHealth = other.GetComponent<Health> ();
+			var targetHealth = other.GetComponent<Health>();
 			if (targetHealth) {
 				ScoreManager.score += 10;
 				targetHealth.CurrentHealth--;

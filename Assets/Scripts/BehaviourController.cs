@@ -10,12 +10,15 @@ public abstract class BehaviourController : MonoBehaviour {
 	protected Rigidbody2D rb;
 	protected Vector2 velocity;
 	protected Health health;
+
+	private PlayerController playrC;
 	
 	protected abstract void DetermineDirection();
 	// Use this for initialization
 	virtual protected void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		health = GetComponent<Health>();
+		playrC = GetComponent<PlayerController>();
 	}
 	
 	// Update is called once per frame
@@ -25,8 +28,15 @@ public abstract class BehaviourController : MonoBehaviour {
 	}
 
 	virtual protected void CheckHealth(){
-		if(!health.IsAlive){
-			Destroy(gameObject, 0f);
+
+		if(!health.IsAlive)
+		{
+			if(playrC) {
+				Debug.Log("MATAR AL PLAYER EN 3 SEGUNDOS");
+				Destroy(gameObject, 3f);
+			} else {
+				Destroy(gameObject);
+			}
 		}
 	}
 	

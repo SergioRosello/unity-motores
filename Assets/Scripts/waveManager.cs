@@ -4,34 +4,39 @@ using UnityEngine;
 
 public class waveManager : MonoBehaviour {
 
-	public List<GameObject> wave0;
-	public List<GameObject> wave1;
-	private List<List<GameObject>> waves;
-	private int numberOfEnemiesInWave = 0;
-
+	[Range(0.0f, 1.0f)]
+	public float basicEnemySpawnRate;
+	
+	[Range(0.0f, 1.0f)]
+	public float steerEnemySpawnRate;
+	public List<GameObject> enemyTypes;
+	private float time;
+	private int wave;
+	private bool wave0;
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(this);
-		waves  = new List<List<GameObject>>();
-		waves.Add(wave0);
-		waves.Add(wave1);
-		numberOfEnemiesInWave = wave0.Count;
-		spawnWave(waves[0]);
+		wave0 = true;
 	}
-	protected void spawnWave(List<GameObject> wave){
-		PoolManager.Load(wave[0], wave.Count);
-		foreach( GameObject enemy in wave) {
+
+	protected void spawnEnemiesOfType(GameObject enemy, float spawnRate){
+		if(Random.Range(0.0f,1.0f) <= spawnRate){
+			PoolManager.Load(enemy);
 			PoolManager.Spawn(enemy);
-			numberOfEnemiesInWave--;
 		}
 	}
 	void Update(){
-		Debug.Log("waves[0].Count -> " + waves[0].Count);
-		if(waves[0].Count == 0){
-			waves.Remove(waves[0]);
-			numberOfEnemiesInWave = waves[0].Count;
-			Debug.Log("waves 0 " + waves[0].Count);
-			spawnWave(waves[0]);
+		
+		if(!PauseMenu.GameIsPaused) {
+			spawnEnemiesOfType(enemyTypes[0], basicEnemySpawnRate);
+			spawnEnemiesOfType(enemyTypes[1], steerEnemySpawnRate);		
+			// StartCoroutine("enemyWaveManager");
 		}
 	}
+
+	// IEnumerator enemyWaveManager(){
+	// 	spawnEnemiesOfType(enemyTypes[0], basicEnemySpawnRate);
+	// 	spawnEnemiesOfType(enemyTypes[1], steerEnemySpawnRate);
+	// 	yield return new WaitForSeconds(10);
+	// }
 }

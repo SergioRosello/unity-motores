@@ -21,6 +21,10 @@ public class BasicEnemyController : BehaviourController {
 			speed = maxSpeed;
 		}
 		velocity = new Vector2(0, speed);
+
+		if(Vector2.Distance(transform.position, Vector2.zero) > 15) {
+			Destroy(gameObject);
+		}
 	}
 
 	protected override void DetermineDirection(){

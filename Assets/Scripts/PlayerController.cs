@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : BehaviourController {
 
@@ -45,6 +46,18 @@ public class PlayerController : BehaviourController {
 		}
 	}
 
+	void OnTriggerEnter2D(Collider2D other){
+			if(other.gameObject.layer == Layers.Enemies){
+				Health enemyhealth = other.GetComponent<Health>();
+				Debug.Log("Health type: " + health.GetType());
+				if(health)
+					enemyhealth.CurrentHealth--;
+				else
+					Destroy(other.gameObject);
+				health.CurrentHealth--;
+			}
+	}
+
 	protected void keepPlayerWithinBounds(){
 		// Keep player between upper bounds
 		if(rb.position.y + playerBoundsY > Camera.main.orthographicSize){
@@ -70,5 +83,9 @@ public class PlayerController : BehaviourController {
 		horizontal = Input.GetAxisRaw("Horizontal");
 		vertical = Input.GetAxisRaw("Vertical");
 
+	}
+
+	void OnDestroy(){
+		// SceneManager.LoadScene("Death");
 	}
 }
