@@ -360,6 +360,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114396406118227470, guid: ab58037ac87f5402d998577bc9497c04,
+        type: 2}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fc75506bc4944b4e96146306bdaaed6, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab58037ac87f5402d998577bc9497c04, type: 2}
   m_IsPrefabParent: 0
@@ -590,9 +595,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 5fc75506bc4944b4e96146306bdaaed6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.307
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1841,7 +1846,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f9b8b8467753b47c1b49c442eecc278d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

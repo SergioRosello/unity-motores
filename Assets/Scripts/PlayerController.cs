@@ -14,10 +14,13 @@ public class PlayerController : BehaviourController {
 	private float timerBetweenBulletsAux = 0;
 
 	Animator animator;
+	public AudioClip shot;
+	private AudioSource audioSource;
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
 		 screenRatio = Mathf.Abs((float)Screen.width / (float)Screen.height);
+		 audioSource = GetComponent<AudioSource>();
 		 widthOrtho = Camera.main.orthographicSize * screenRatio;
 		 animator = GetComponent<Animator>();
 	}
@@ -32,6 +35,8 @@ public class PlayerController : BehaviourController {
 			timerBetweenBulletsAux = 0;
 			var bullet = GameObject.Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 			bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, bulletSpeed);
+			audioSource.clip = shot;
+			audioSource.Play();
 		}
 		//TODO: Esto está mal necesita refactorización
 		if(horizontal > 0){
@@ -44,7 +49,10 @@ public class PlayerController : BehaviourController {
 			animator.SetBool("Right", false);
 			animator.SetBool("Left", false);
 		}
+	}
 
+	void Explosion(){
+		Destroy(gameObject);
 		if(!health.IsAlive){
 			SceneManager.LoadScene("Death");
 		}
