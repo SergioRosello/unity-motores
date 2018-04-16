@@ -30,7 +30,7 @@ Los enemigos adquieren el comportamiento de BahaviourController. Una opción a v
 \end{itemize}
 Ambos enemigos son destruidos si salen de la visión de la cámara.
 \subsubsection{Actor principal}
-Se encarga de gestionar la velocidad del actor, ). Los disparos también los controlo desde aquí, con un contador, puedo cambiar el intervalo de disparo.
+Se encarga de  
 \begin{itemize}
 	\item \textbf{Mantener al jugador entre los límites de la pantalla}\\Gestiona que el actor no pueda salir del mapa, usando Screen.width y Screen.height calculo el aspect ratio de la pantalla, para averiguar el tamaño de la pantalla en X. Una vez hecho esto, me aseguro de que el actor se quede entre esas coordenadas. El método se llama keepPlayerWithinBounds()
 	\item \textbf{Gestión del movimiento}\\Usa el método DetermineDirection para asignar los axis sobre los que controlar el jugador. Este método se ejecuta al llamar a base.Update en su propio update. Actualiza la variable velocity con la nueva velocidad cada frame.
