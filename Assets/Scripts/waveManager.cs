@@ -9,14 +9,13 @@ public class waveManager : MonoBehaviour {
 	
 	[Range(0.0f, 1.0f)]
 	public float steerEnemySpawnRate;
-	public List<GameObject> enemyTypes;
-	private float time;
-	private int wave;
-	private bool wave0;
+    public List<GameObject> enemyTypes;
+	private float bossTimer;
+    public float bossEntrance;
+
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad(this);
-		wave0 = true;
 	}
 
 	protected void spawnEnemiesOfType(GameObject enemy, float spawnRate){
@@ -25,18 +24,23 @@ public class waveManager : MonoBehaviour {
 			PoolManager.Spawn(enemy);
 		}
 	}
-	void Update(){
-		
+
+    protected void spawnEnemiesOfType(GameObject enemy){
+        PoolManager.Load(enemy);
+        PoolManager.Spawn(enemy);
+    }
+
+    void Update(){
+        bossTimer += Time.deltaTime;
 		if(!PauseMenu.GameIsPaused) {
 			spawnEnemiesOfType(enemyTypes[0], basicEnemySpawnRate);
-			spawnEnemiesOfType(enemyTypes[1], steerEnemySpawnRate);		
-			// StartCoroutine("enemyWaveManager");
+			spawnEnemiesOfType(enemyTypes[1], steerEnemySpawnRate);
+
+            if (bossEntrance < bossTimer)
+            {
+                bossTimer = 0;
+                spawnEnemiesOfType(enemyTypes[2]);
+            }
 		}
 	}
-
-	// IEnumerator enemyWaveManager(){
-	// 	spawnEnemiesOfType(enemyTypes[0], basicEnemySpawnRate);
-	// 	spawnEnemiesOfType(enemyTypes[1], steerEnemySpawnRate);
-	// 	yield return new WaitForSeconds(10);
-	// }
 }

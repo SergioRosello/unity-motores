@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95076135547272850}
   - component: {fileID: 114734695348073056}
   - component: {fileID: 210359314917646022}
+  - component: {fileID: 82117589429429934}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -91,6 +92,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.16}
   m_EdgeRadius: 0
+--- !u!82 &82117589429429934
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399694873013982}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5fc75506bc4944b4e96146306bdaaed6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.108
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95076135547272850
 Animator:
   serializedVersion: 3
@@ -126,6 +207,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1055680077616422, guid: 9c9723a5e75e443639d8326c42ede4bc,
     type: 2}
   bulletSpeed: 6.57
+  UIHealth: {fileID: 0}
+  shot: {fileID: 8300000, guid: 0665ba5dc2acc7b48b03c2eec1803321, type: 3}
 --- !u!114 &114734695348073056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e988ca3c28a114aee850751572c0a49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 1
+  MaxHealth: 5
   SizeWhenDead: {x: 1.5, y: 0.75}
   OffsetWhenDead: {x: -1.5, y: -0.5}
 --- !u!210 &210359314917646022
