@@ -3,30 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BasicEnemyController : BehaviourController {
-	public float enemyBounds = 1f;
-	public float speed = 2f;
-	// Use this for initialization
-	protected override void Start () {
-		base.Start();
-		rb.position = new Vector2(Random.Range(-PlayerController.widthOrtho + enemyBounds, PlayerController.widthOrtho - enemyBounds),Camera.main.orthographicSize);
-		speed = -maxSpeed;
-	}
-	
-	// Update is called once per frame
-	protected override void Update () {
-		base.Update();
+    public float enemyBounds = 1f;
+    private float speed;
+    // Use this for initialization
+    protected override void Start()
+    {
+        base.Start();
+        rb.position = new Vector2(Random.Range(-PlayerController.widthOrtho + enemyBounds, PlayerController.widthOrtho - enemyBounds), Camera.main.orthographicSize);
+        speed = -maxSpeed;
+    }
 
-		if(rb.position.y <= -Camera.main.orthographicSize + enemyBounds){
-			rb.MoveRotation(180f);
-			speed = maxSpeed;
-		}
-		velocity = new Vector2(0, speed);
+    // Update is called once per frame
+    protected override void Update()
+    {
+        base.Update();
 
-		if(Vector2.Distance(transform.position, Vector2.zero) > 15) {
-			Destroy(gameObject);
-		}
-	}
+        if (rb.position.y <= -Camera.main.orthographicSize + enemyBounds)
+        {
+            rb.MoveRotation(180f);
+            speed = maxSpeed;
+        }
+        velocity = new Vector2(0, speed);
 
-	protected override void DetermineDirection(){
-	}
+        if (Vector2.Distance(transform.position, Vector2.zero) > 15)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    protected override void DetermineDirection()
+    {
+    }
 }

@@ -8,11 +8,13 @@ public float timeToDespawn = 5;
 float spawnTime;
 	private SpriteRenderer sr;
 	private Rigidbody2D rb;
+    Animator anim;
 
 	void Awake() {
 		StartCoroutine (DespawnCoroutine());
 		sr = GetComponentInChildren<SpriteRenderer> ();
 		rb = GetComponent<Rigidbody2D> ();
+        anim = GetComponent<Animator>();
 	}
 
 	void Start () {
@@ -26,7 +28,8 @@ float spawnTime;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.layer == Layers.Enemies) {
+        
+        if (other.gameObject.layer == Layers.Enemies) {
 			var targetHealth = other.GetComponent<Health>();
 			if (targetHealth) {
 				ScoreManager.score += 10;
