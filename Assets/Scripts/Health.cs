@@ -21,13 +21,9 @@ public class Health : MonoBehaviour {
 					if (_anim) {
 						_anim.SetTrigger ("die");
 					}
-					var collider = gameObject.AddComponent<BoxCollider2D> ();
-					collider.size = SizeWhenDead;
-					collider.offset = new Vector2(OffsetWhenDead.x, OffsetWhenDead.y);
-					collider.isTrigger = true;
 				} else {
 					if(_anim) {
-						_anim.SetTrigger ("hit");
+						_anim.SetTrigger("hit");
 					}
 				}
 			}

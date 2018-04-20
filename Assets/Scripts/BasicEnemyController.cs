@@ -27,7 +27,8 @@ public class BasicEnemyController : BehaviourController {
 
         if (Vector2.Distance(transform.position, Vector2.zero) > 15)
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            PoolManager.Despawn(gameObject);
         }
     }
 

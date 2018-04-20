@@ -183,11 +183,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   enemyBounds: 1
-  speed: 0.5
   bulletPrefab: {fileID: 1055680077616422, guid: e621920688dd15a41ad4d0bd59671e9c,
     type: 2}
   bulletSpeed: 5
-  bulletThreshold: 0.119
+  bulletThreshold: 0.064
   shot: {fileID: 8300000, guid: d0b6cfcd28176564799b7bdd490d9f46, type: 3}
 --- !u!114 &114980661868599414
 MonoBehaviour:

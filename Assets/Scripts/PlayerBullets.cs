@@ -23,19 +23,20 @@ float spawnTime;
 
 	private IEnumerator DespawnCoroutine() {
 		yield return new WaitForSeconds(timeToDespawn);
-		Destroy (gameObject);
+		// Destroy (gameObject);
+		PoolManager.Despawn(gameObject);
 		yield return null;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-        
         if (other.gameObject.layer == Layers.Enemies) {
 			var targetHealth = other.GetComponent<Health>();
 			if (targetHealth) {
 				ScoreManager.score += 10;
 				targetHealth.CurrentHealth--;
 			}
-			Destroy(gameObject, 0f);
+			//Destroy(gameObject, 0f);
+			PoolManager.Despawn(gameObject);
 		}
 	}	
 }

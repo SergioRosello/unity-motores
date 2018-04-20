@@ -32,10 +32,10 @@ public abstract class BehaviourController : MonoBehaviour {
 		if(!health.IsAlive)
 		{
 			if(playrC) {
-				Debug.Log("MATAR AL PLAYER EN 3 SEGUNDOS");
 				Destroy(gameObject, 3f);
 			} else {
-				Destroy(gameObject);
+				PoolManager.Despawn(gameObject);
+				// Destroy(gameObject);
 			}
 		}
 	}

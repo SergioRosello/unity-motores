@@ -64,7 +64,7 @@ public class PlayerController : BehaviourController {
 	void OnTriggerEnter2D(Collider2D other){
 		Health enemyhealth = other.GetComponent<Health>();
 		if(enemyhealth) enemyhealth.CurrentHealth--;
-		else Destroy(other.gameObject);
+		else PoolManager.Despawn(gameObject); //Destroy(other.gameObject);
 		health.CurrentHealth--;
 	}
 
