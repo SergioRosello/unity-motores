@@ -40,30 +40,43 @@ Este script se encarga de la gestión del avión de jugador.
 	\item \textbf{Gestión de la vida}\\Cuando el BoxCollider2D colisiona con cualquier objeto, se le reduce la vida al jugador, si colisiona con un enemigo, le quita la vida al enemigo también. Si solo tiene una vida, el enemigo muere.
 	\item \textbf{Gestión de la puntuación} En el OnDestroy() guarda la puntuación "Highscore" en memoria para la próxima partida.
 \end{itemize}
-\section{Controlador de Mapa}
+\section{Scripts de propósito específico}
+\subsection{Controlador de Mapa}
 Este script simplemente desplaza el mapa de fondo a una velocidad gestionada por el usuario de forma continua.
-\section{Gestión de vida}
+\subsection{Gestión de vida}
 Esta script gestiona la vida de cada gameobject al que se le añade. Tiene un método IsAlive() que uso para saber si debería ser destruido un GameObject. Tiene funcionalidad de animator ya hecha aunque no lo he usado.
-\section{Intermitent}
+\subsection{Intermitent}
 Gestiona con una corrutina la aparición y desaparición del cartel "Insert coin" del menú de inicio.
-\section{layers}
+\subsection{layers}
 Script que facilita la implementación de layers en el código. Al conocer posteriormente la matriz de colisiones 2D del editor de Unity, no lo he usado den todos lados, sino que solamente en las partes necesarias.
-\section{Main Menu}
+\subsection{Main Menu}
 Simplemente carga el nivel 1 si se ha presionado una tecla.
-\section{Pause Menu}
+\subsection{Pause Menu}
 Controla el menú de pausa. Puede llevar al jugador al menú de inicio, salir del juego o resumir el juego.
-\section{Balas}
+\subsection{Balas}
 Si colisionan con los enemigos, les quitan una vida y se eliminan las balas. Si no colisionan con nada, se eliminan a los 5 segundos.
-\section{PoolManager}
+\subsection{PoolManager}
 Uso este script para hacer que los enemigos aparezcan en el mapa. Es un singleton de forma que solo puede haber uno a la vez mientras el juego está en ejecución. Cuando quiero añadir un gameObject mediante el PoolManager, llamo a sus métodos load y spawn. En realidad no sería necesario el PoolManager para hacer este juego. Además, creo que se podría hacer mejor de lo que lo estoy haciendo.
-\section{SceneLoader}
+\subsection{SceneLoader}
 Este es un script que empecé a hacer para facilitar el cambio de escenas en el juego pero no he acabado de retocarlo, por eso solo lo uso en la escena de la muerte. Lo que quería hacer era gestionar el cambio de escenas directamente desde el editor. Esto si lo consigo con el script, por tanto, lo he dejado ahí.
-\section{ScoreManager}
+\subsection{ScoreManager}
 Mantiene actualizados los campos de puntuación. Si el jugador está batiendo el record de puntuación, esta se actualiza con la puntuación de la partida. Si el juego se ha ejecutado en la máquina antes, ha guardado una puntuación máxima, que recoge y usa para las próximas partidas.
-\section{Singleton}
+\subsection{Singleton}
 Una clase para implementar el patrón de diseño Singleton. Sirve para que solo pueda existir una instancia de un objeto a la vez.
-\section{WaveManager}
+\subsection{WaveManager}
 Este script gestiona las oleadas de los enemigos. Los dos enemigos más básicos (Steer y Basic) están controlados por probabilidades de aleatoriedad. Si el número aleatorio es menor al indicado por el usuario, se instancia un enemigo. El boss necesita que pase cierto tiempo, ya que es demasiado complicado batirlo tantas veces. El juego está diseñado para ser un solo nivel y que el jugador juegue hasta que muera.
+\section{Editor}
+Durante la realización de la práctica, he tenido que hacer tanto scripts como acciones mediante el editor.
+\subsection{Organización de carpetas}
+Las carpetas están organizadas según tipos de datos.
+\subsection{Layer collision matrix}
+Esta matriz indica al editor que layers van a poder colisionar. De esta forma, no tengo que detectarlo mediante código. Esto hace que el código sea bastante mas sencillo.
+\subsection{Animator}
+El animator del player decide a que estado de animación se va a dirigir la animación. 
+\subsection{audio}
+Contiene los audios de todo el juego. Para que un audio se reproduzca, se necesita un audioListener en la escena, un audioSource. He puesto una canción en cada escena del juego y efectos de sonido para el jugador y para el boss.
+\subsection{Escenas}
+En este juego existen 3 escenas. Una de inicio del juego, otra del nivel, en la que juega el jugador y otra para la muerte. Todas estas escenas tienen interacción entre si de forma que puedes pasar de una escena a la otra sin reiniciar el juego. Básicamente como funcionaría un juego de verdad.
 \section{Conclusión}
 Durante el desarrollo del juego, he aprendido la API de Unity y creo que conozco el motor lo suficientemente bien como para continuar aprendiendo de forma autodidacta.
 
