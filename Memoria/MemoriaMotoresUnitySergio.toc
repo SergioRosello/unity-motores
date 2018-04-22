@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {6}Editor}{5}{section.6}
 \contentsline {subsection}{\numberline {6.1}Organizaci\IeC {\'o}n de carpetas}{5}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Layer collision matrix}{5}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Animator}{5}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Animator}{6}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}audio}{6}{subsection.6.4}
 \contentsline {subsection}{\numberline {6.5}Escenas}{6}{subsection.6.5}
 \contentsline {section}{\numberline {7}Conclusi\IeC {\'o}n}{6}{section.7}

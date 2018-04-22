@@ -39,7 +39,7 @@ Todos los enemigos son destruidos si salen de la visión de la cámara.
 \subsubsection{Actor principal}
 Este script se encarga de la gestión del avión de jugador. 
 \begin{itemize}
-	\item \textbf{Mantener al jugador entre los límites de la pantalla}\\Gestiona que el actor no pueda salir del mapa, usando Screen.width y Screen.height calculo el aspect ratio de la pantalla, para averiguar el tamaño de la pantalla en X. Una vez hecho esto, me aseguro de que el actor se quede entre esas coordenadas. El método se llama keepPlayerWithinBounds()
+	\item \textbf{Mantener al jugador entre los límites de la pantalla}\\Gestiona que el actor no pueda salir del mapa, usando Screen.width y Screen.height calculo el aspect ratio de la pantalla, para averiguar el tamaño de la pantalla en X. Una vez hecho esto, me aseguro de que el actor se quede entre esas coordenadas. El método se llama keepPlayerWithinBounds(). Al usar un aspect ratio de 1:2 (500 x 1000) funciona perfecto, porque mantiene al jugador entre los bordes del mapa. He estado buscando formas de mantener el aspect ratio del juego siempre, pero no he conseguido hacer que se mantenga siempre constante. Por tanto, para que el juego funcione bien, se debería jugar en un aspect ratio de 1:2 (500 x 1000 por ejemplo).
 	\item \textbf{Gestión del movimiento}\\Usa el método DetermineDirection para asignar los axis sobre los que controlar el jugador. Este método se ejecuta al llamar a base.Update en su propio update. Actualiza la variable velocity con la nueva velocidad cada frame.
 	\item \textbf{Gestión de los disparos}\\Los disparos usan un temporizador para poder regular la cadencia de disparo.
 	\item \textbf{Gestión de la animación}\\Asigna los booleanos necesarios para gestionar las animaciones del jugador.
