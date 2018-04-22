@@ -18,7 +18,13 @@
 El juego en el que me he decidido inspirar es: 1942, un juego desarrollado por Capcom para máquinas recreativas en 1984. Mi juego debería ser capaz de tener un loop completo, en el que fuese posible jugar como en las máquinas recreativas. El jugador solamente va a jugar en una escena con scroll semi-infinito. La máxima puntuación se mantiene entre partidas, de forma que un jugador puede ver si ha superado su máximo o no. Al final de las oleadas de aviones pequeñas, va a llegar la oleada del boss, en la que simplemente aparecerá el boss en la pantalla contra el jugador.
 \section{Estructura de código}
 El código está planteado de la forma más sencilla posible, en la que solamente existe lo esencial para que funcione. A continuación explicaré los distintos scripts usados y por qué los he planteado así.
-
+\section{Controles}
+Las acciones que puede ejecutar el avion del personaje son: Movimiento y disparo.
+\begin{itemize}
+	\item \textbf{Movimiento horizontal:} Teclas a, d, Izquierda, Derecha.
+	\item \textbf{Movimiento vertical:} Teclas w, s, Arriba, Abajo.
+	\item \textbf{Disparo:} Barra espaciadora.
+\end{itemize}
 \section{Controladores de movimiento y comportamiento}
 \subsection{BehaviourController}
 Este script es la base de cualquier actor, ya sea enemigo o personaje principal. Se encarga de actualizar la velocidad del objeto, gestionar su vida y adquirir los componentes necesarios para el correcto funcionamiento de las clases hijas (Enemigos y Actor principal).

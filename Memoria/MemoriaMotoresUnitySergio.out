@@ -1,26 +1,27 @@
 \BOOKMARK [1][-]{section.1}{Inspiraci\363n e idea gener\341l}{}% 1
 \BOOKMARK [1][-]{section.2}{Estructura de c\363digo}{}% 2
-\BOOKMARK [1][-]{section.3}{Controladores de movimiento y comportamiento}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{BehaviourController}{section.3}% 4
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Enemigos}{subsection.3.1}% 5
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Actor principal}{subsection.3.1}% 6
-\BOOKMARK [1][-]{section.4}{Scripts de prop\363sito espec\355fico}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{Controlador de Mapa}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{Gesti\363n de vida}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{Intermitent}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.4}{layers}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.5}{Main Menu}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.6}{Pause Menu}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.7}{Balas}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.8}{PoolManager}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.9}{SceneLoader}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.10}{ScoreManager}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.11}{Singleton}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.12}{WaveManager}{section.4}% 19
-\BOOKMARK [1][-]{section.5}{Editor}{}% 20
-\BOOKMARK [2][-]{subsection.5.1}{Organizaci\363n de carpetas}{section.5}% 21
-\BOOKMARK [2][-]{subsection.5.2}{Layer collision matrix}{section.5}% 22
-\BOOKMARK [2][-]{subsection.5.3}{Animator}{section.5}% 23
-\BOOKMARK [2][-]{subsection.5.4}{audio}{section.5}% 24
-\BOOKMARK [2][-]{subsection.5.5}{Escenas}{section.5}% 25
-\BOOKMARK [1][-]{section.6}{Conclusi\363n}{}% 26
+\BOOKMARK [1][-]{section.3}{Controles}{}% 3
+\BOOKMARK [1][-]{section.4}{Controladores de movimiento y comportamiento}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{BehaviourController}{section.4}% 5
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Enemigos}{subsection.4.1}% 6
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Actor principal}{subsection.4.1}% 7
+\BOOKMARK [1][-]{section.5}{Scripts de prop\363sito espec\355fico}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Controlador de Mapa}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Gesti\363n de vida}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Intermitent}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.4}{layers}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.5}{Main Menu}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.6}{Pause Menu}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.7}{Balas}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.8}{PoolManager}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.9}{SceneLoader}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.10}{ScoreManager}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.11}{Singleton}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.12}{WaveManager}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Editor}{}% 21
+\BOOKMARK [2][-]{subsection.6.1}{Organizaci\363n de carpetas}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.2}{Layer collision matrix}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.3}{Animator}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.4}{audio}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.5}{Escenas}{section.6}% 26
+\BOOKMARK [1][-]{section.7}{Conclusi\363n}{}% 27

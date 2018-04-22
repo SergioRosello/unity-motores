@@ -34,8 +34,7 @@ public abstract class BehaviourController : MonoBehaviour {
 			if(playrC) {
 				Destroy(gameObject, 3f);
 			} else {
-				PoolManager.Despawn(gameObject);
-				// Destroy(gameObject);
+				Destroy(gameObject);
 			}
 		}
 	}

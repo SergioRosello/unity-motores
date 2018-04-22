@@ -23,8 +23,7 @@ float spawnTime;
 
 	private IEnumerator DespawnCoroutine() {
 		yield return new WaitForSeconds(timeToDespawn);
-		// Destroy (gameObject);
-		PoolManager.Despawn(gameObject);
+		Destroy (gameObject);
 		yield return null;
 	}
 
@@ -35,8 +34,7 @@ float spawnTime;
 				ScoreManager.score += 10;
 				targetHealth.CurrentHealth--;
 			}
-			//Destroy(gameObject, 0f);
-			PoolManager.Despawn(gameObject);
+			Destroy(gameObject, 0f);
 		}
 	}	
 }

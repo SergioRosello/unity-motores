@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.5)  21 APR 2018 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.5)  22 APR 2018 13:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,9 +552,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./MemoriaMotoresUnitySergio.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 5.
 )
 \tf@toc=\write5
 \openout5 = `MemoriaMotoresUnitySergio.toc'.
@@ -564,42 +564,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.15 \clearpage
                 [1]
-Overfull \hbox (15.9062pt too wide) in paragraph at lines 22--22
-[]\OT1/cmr/bx/n/14.4 Controladores de movimiento y com-por-tamiento 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
- [2
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+
+Overfull \hbox (15.9062pt too wide) in paragraph at lines 28--28
+[]\OT1/cmr/bx/n/14.4 Controladores de movimiento y com-por-tamiento 
+ []
+
+[2
 
 ] [3] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
  [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
  (./MemoriaMotoresUnitySergio.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `MemoriaMotoresUnitySergio.out' has not changed.
-(rerunfilecheck)             Checksum: E0C24A1BDB704FAE1B2C1B6269C67568;1628.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
+(rerunfilecheck)             Checksum: AF0F69A46B2852EBEF98FC6A2F476CCD;1673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
- 6285 strings out of 492982
- 90662 string characters out of 6138580
+ 6287 strings out of 492982
+ 90682 string characters out of 6138580
  186405 words of memory out of 5000000
- 9771 multiletter control sequences out of 15000+600000
+ 9772 multiletter control sequences out of 15000+600000
  8064 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,7n,28p,951b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,7n,28p,951b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on MemoriaMotoresUnitySergio.pdf (7 pages, 98364 bytes).
+Output written on MemoriaMotoresUnitySergio.pdf (7 pages, 99383 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

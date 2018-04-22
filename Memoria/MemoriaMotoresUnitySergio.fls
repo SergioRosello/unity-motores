@@ -104,9 +104,9 @@ INPUT MemoriaMotoresUnitySergio.toc
 INPUT MemoriaMotoresUnitySergio.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 OUTPUT MemoriaMotoresUnitySergio.toc
+INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/share/texmf-dist/tex/latex/base/omscmr.fd
 INPUT MemoriaMotoresUnitySergio.aux
 INPUT ./MemoriaMotoresUnitySergio.out
 INPUT ./MemoriaMotoresUnitySergio.out
